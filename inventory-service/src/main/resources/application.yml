@@ -7,9 +7,9 @@ spring:
 
   # cloud properties
   cloud:
+    function:
+      definition: inventoryProcessor
     stream:
-      function:
-        definition: inventoryProcessor
       bindings:
         inventoryProcessor-in-0:
           destination: order-event
@@ -18,17 +18,24 @@ spring:
 
   # datasource properties
   datasource:
-    url: jdbc:h2:file:~/test;AUTO_SERVER=TRUE
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/pg-db-saga
+    username: postgres
+    password: pass
 
   # jpa properties
   jpa:
-    open-in-view: false
-    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
     hibernate:
       ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
 
   # h2 properties
   h2:

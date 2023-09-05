@@ -1,6 +1,8 @@
 package com.example.orderservice.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Version;
 import lombok.EqualsAndHashCode;
@@ -27,8 +29,11 @@ public class PurchaseOrder {
     private Integer userId;
     private Integer productId;
     private Integer price;
+    @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
+    @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
+    @Enumerated(EnumType.STRING)
     private InventoryStatus inventoryStatus;
 
     @Version
