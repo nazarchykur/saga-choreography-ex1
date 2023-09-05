@@ -32,4 +32,11 @@ public class OrderEvent implements Event {
         return this.date;
     }
 
+    public PurchaseOrderDto getPurchaseOrder() {
+        return purchaseOrder;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
 }

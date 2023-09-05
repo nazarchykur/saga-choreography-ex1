@@ -31,4 +31,12 @@ public class InventoryEvent implements Event {
     public Date getDate() {
         return this.date;
     }
+
+    public InventoryDto getInventory() {
+        return inventory;
+    }
+
+    public InventoryStatus getInventoryStatus() {
+        return inventoryStatus;
+    }
 }

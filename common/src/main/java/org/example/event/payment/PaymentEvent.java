@@ -1,6 +1,7 @@
 package org.example.event.payment;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.example.dto.PaymentDto;
 import org.example.event.Event;
@@ -30,5 +31,13 @@ public class PaymentEvent implements Event {
     @Override
     public Date getDate() {
         return this.date;
+    }
+
+    public PaymentDto getPayment() {
+        return payment;
+    }
+
+    public PaymentStatus getPaymentStatus() {
+        return paymentStatus;
     }
 }

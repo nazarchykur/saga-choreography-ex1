@@ -2,3 +2,4 @@ rootProject.name = 'saga-choreography-ex1'
 
 include('common')
 include('order-service')
+include('payment-service')
