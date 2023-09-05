@@ -74,8 +74,6 @@ This project relies on the following technologies and dependencies:
 - Spring Cloud Stream and Spring Kafka for stream processing.
 - Project Reactor for reactive programming.
 
-Certainly, I can include a section that explains the cloud properties related to the messaging and event handling in the README. Here's an updated README section that provides more information about the cloud properties:
-
 
 ## Cloud Properties
 
